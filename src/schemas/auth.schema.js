@@ -10,6 +10,7 @@ export const registerSchema = z.object({
   password: z
     .string({ required_error: "La contraseña es requerida" }) //Password is required
     .min(6, { message: "La contraseña debe tener más de 6 dígitos " }), //password must be at least 6 characters
+  level: z.number().int().optional(),
 });
 
 export const signinSchema = z.object({
